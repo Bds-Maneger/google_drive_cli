@@ -1,7 +1,7 @@
 #!/bin/bash
 
 APP_NAME="gdrive"
-PLATFORMS="darwin/386 darwin/amd64 darwin/arm darwin/arm64 dragonfly/amd64 freebsd/386 freebsd/amd64 freebsd/arm linux/386 linux/amd64 linux/arm linux/arm64 linux/ppc64 linux/ppc64le linux/mips64 linux/mips64le linux/rpi netbsd/386 netbsd/amd64 netbsd/arm openbsd/386 openbsd/amd64 openbsd/arm plan9/386 plan9/amd64 solaris/amd64 windows/386 windows/amd64"
+PLATFORMS="linux/386 linux/amd64 linux/arm linux/arm64 linux/ppc64 linux/ppc64le linux/mips64 linux/mips64le linux/rpi windows/386 windows/amd64"
 
 BIN_PATH="_release/bin"
 
@@ -13,7 +13,7 @@ rm $BIN_PATH/* 2> /dev/null
 for PLATFORM in $PLATFORMS; do
     GOOS=${PLATFORM%/*}
     GOARCH=${PLATFORM#*/}
-    BIN_NAME="${APP_NAME}-${GOOS/darwin/osx}-${GOARCH/amd64/x64}"
+    BIN_NAME="${APP_NAME}_${GOARCH}"
 
     if [ $GOOS == "windows" ]; then
         BIN_NAME="${BIN_NAME}.exe"
@@ -33,5 +33,4 @@ for PLATFORM in $PLATFORMS; do
     echo "Building $BIN_NAME"
     go build -ldflags '-w -s' -o ${BIN_PATH}/${BIN_NAME}
 done
-
-echo "All done"
+exit 0
