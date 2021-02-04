@@ -14,9 +14,9 @@ import (
 	"github.com/prasmussen/gdrive/drive"
 )
 
-const ClientId = "367116221053-7n0vf5akeru7on6o2fjinrecpdoe99eg.apps.googleusercontent.com"
-const ClientSecret = "1qsNodXNaWq1mQuBjUjmvhoO"
-const TokenFilename = "token_v2.json"
+const ClientId = "1000381612165-cukb31ib1ej3vnt9lbh8v0nvlrvvtp4f.apps.googleusercontent.com"
+const ClientSecret = "PwfAhb7-mKqt7UozGUcETFWT"
+const TokenFilename = "google_drive.json"
 const DefaultCacheFileName = "file_cache.json"
 
 func listHandler(ctx cli.Context) {
