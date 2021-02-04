@@ -2,11 +2,11 @@ package main
 
 import (
 	"fmt"
-	"github.com/prasmussen/gdrive/cli"
 	"os"
 	"runtime"
 	"strings"
 	"text/tabwriter"
+	"github.com/Bds-Maneger/google_drive_cli/cli"
 )
 
 func printVersion(ctx cli.Context) {

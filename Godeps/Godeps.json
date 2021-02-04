@@ -1,5 +1,5 @@
 {
-	"ImportPath": "github.com/prasmussen/gdrive",
+	"ImportPath": "github.com/Bds-Maneger/google_drive_cli",
 	"GoVersion": "go1.6",
 	"GodepVersion": "v61",
 	"Deps": [

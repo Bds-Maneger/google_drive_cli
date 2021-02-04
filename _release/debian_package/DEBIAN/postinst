@@ -1,0 +1,9 @@
+#!/bin/sh
+echo ""
+echo "Let's Login to Google Drive to finish the installation"
+esac $(uname -m)
+x86_64) gdrive_amd64 about;;
+i3*6) gdrive_386 about;;
+*) echo "use the command gdrive_ plus your architecture"
+case
+exit 0

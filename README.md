@@ -14,27 +14,12 @@ If you want to compile from source you need the [go toolchain](http://golang.org
 Version 1.5 or higher.
 
 ## Installation
-### With [Homebrew](http://brew.sh) on Mac
-```
-brew install gdrive
-```
-### Other
-Download `gdrive` from one of the links below. On unix systems
-run `chmod +x gdrive` after download to make the binary executable.
-The first time gdrive is launched (i.e. run `gdrive about` in your
-terminal not just `gdrive`), you will be prompted for a verification code.
-The code is obtained by following the printed url and authenticating with the
-google account for the drive you want access to. This will create a token file
-inside the .gdrive folder in your home directory. Note that anyone with access
-to this file will also have access to your google drive.
-If you want to manage multiple drives you can use the global `--config` flag
-or set the environment variable `GDRIVE_CONFIG_DIR`.
-Example: `GDRIVE_CONFIG_DIR="/home/user/.gdrive-secondary" gdrive list`
-You will be prompted for a new verification code if the folder does not exist.
+
+Add debian apt sources [Sirherobrine23 Repository](https://apt-pages.sh23.org/add-repo.sh) and install with the command `apt install gdrive`
 
 ## Compile from source
 ```bash
-go get github.com/prasmussen/gdrive
+go get github.com/Bds-Maneger/google_drive_cli
 ```
 The gdrive binary should now be available at `$GOPATH/bin/gdrive`
 

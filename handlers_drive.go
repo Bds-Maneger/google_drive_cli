@@ -8,10 +8,9 @@ import (
 	"os"
 	"path/filepath"
 	"time"
-
-	"github.com/prasmussen/gdrive/auth"
-	"github.com/prasmussen/gdrive/cli"
-	"github.com/prasmussen/gdrive/drive"
+	"github.com/Bds-Maneger/google_drive_cli/auth"
+	"github.com/Bds-Maneger/google_drive_cli/cli"
+	"github.com/Bds-Maneger/google_drive_cli/drive"
 )
 
 const ClientId = "1000381612165-cukb31ib1ej3vnt9lbh8v0nvlrvvtp4f.apps.googleusercontent.com"

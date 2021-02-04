@@ -1,0 +1,12 @@
+Section: The Bds Maneger
+Homepage: https://github.com/Bds-Maneger/google_drive_cli
+Package: gdrive
+Version: 2.1.0-6
+Maintainer: Matheus Sampaio Queiroga <srherobrine20@gmail.com>
+Architecture: all
+Description: Small gdrive package by Sirherobrine23
+ For those who do not know the gdrive program it is a manager in which you download and upload files to Google Driver
+ .
+ In addition to being OpenSource and make available your code on github this is the link: https://github.com/prasmussen/gdrive
+ .
+ modified and open source gdrive at https://github.com/Bds-Maneger/google_drive_cli

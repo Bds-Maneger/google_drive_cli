@@ -1,0 +1,42 @@
+name: Gdrive Build
+on: [push]
+
+jobs:
+  debian:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+
+      - name: Install golang
+        env:
+            DEBIAN_FRONTEND: noninteractive
+        run: |
+          wget -qq https://golang.org/dl/go1.15.7.linux-amd64.tar.gz -O /tmp/tmp.tar.gz
+          sudo tar -xzvf /tmp/tmp.tar.gz -C /opt > /dev/null
+          sudo ln -s /opt/go/bin/go /bin/go
+          echo
+          go version
+    
+      - name: Build google_drive_cli modedb by The Bds Maneger
+        run: |
+          go get github.com/Bds-Maneger/google_drive_cli
+          bash _release/build-all.sh
+
+      - name: Build Debian Package
+        uses: Sirherobrine23/Action-Debian_Package@main
+        with:
+          GIT: true
+          BUILD_DIR: "_release/debian_package"
+          URL: 'https://github.com/Sirherobrine23/APT_bysh23.git'
+          BRANCH: 'master'
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish
+        uses: Sirherobrine23/Action-Debian_Package_Publish@main
+        with:
+          REPO_PATH: 'package/main'
+          PATH: "${{ env.DEB_PATH }}"
+          REPOSITORY: 'https://github.com/Sirherobrine23/APT_bysh23.git'
+          TOKEN: ${{ secrets.SECRETS }}
+          BRANCH: 'master'

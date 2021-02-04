@@ -3,8 +3,7 @@ package main
 import (
 	"fmt"
 	"os"
-
-	"github.com/prasmussen/gdrive/cli"
+	"github.com/Bds-Maneger/google_drive_cli/cli"
 )
 
 const Name = "gdrive"
